@@ -1,0 +1,15 @@
+(ns sandbox.core-async-events
+  (:require-macros [cljs.core.async.macros :refer [go]])
+  (:require [cljs.core.async :as async :refer [put! >! <! chan]]
+            [domina.css :as css]
+            [domina.event :as event]))
+
+(defn events [element event-type]
+  (let [c (chan)]
+    (event/listen! element event-type (fn [e] (put! c e)))
+    c))
+
+(let [click-events (events (css/sel "#some-button") :click)]
+  (go (while true
+        (do-something-with (<! click-events))))
+  click-events)

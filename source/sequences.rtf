@@ -1,0 +1,24 @@
+{\rtf1\ansi\uc0 \deff1{\fonttbl{\f1\fmodern\fprq1\fcharset0 monaco;}}{\colortbl;\red255\green245\blue238;\red00\green00\blue00;\red255\green20\blue147;\red255\green20\blue147;\red41\green41\blue204;\red41\green41\blue204;\red106\green90\blue205;\red128\green00\blue128;\red255\green20\blue147;\red85\green85\blue85;\red103\green103\blue103;\red46\green139\blue87;\red46\green139\blue87;\red105\green105\blue105;\red00\green00\blue143;}
+\paperw11905\paperh16837\margl1134\margr1134\margt1134\margb1134\sectd\plain\f1\fs40
+\pard \cbpat1{{\cf2{}}{\cf11{(}}{\cf2{ns sequence-demo}}}\par\pard
+\cbpat1{  {\cf11{(:}}{\cf2{require}} {\cf11{[}}{\cf2{clojure.java.io}} {\cf11{:}}{\cf2{as io}}{\cf11{]}}}\par\pard
+\cbpat1{{\cf2{}}            {\cf11{[}}{\cf2{clojure.string}} {\cf11{:}}{\cf2{as s}}{\cf11{]))}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;; Sequencia de arquivos e diretorios}}}\par\pard
+\cbpat1{{\cf2{}}{\cf11{(}}{\cf2{}}{\cf12{\b def\b0 }} {\cf2{arvore-de-diretorio}} {\cf11{(}}{\cf2{file-seq}} {\cf11{(}}{\cf2{io/file}} {\cf3{"some/path"}}{\cf2{}}{\cf11{)))}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;;=> (<#clojure.java.io.File#{3}{4}{7}fd{7}{2}{3} /some/path/folder>}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;;    <#clojure.java.io.File#{5}{8}{4}ffd{2}{2} /some/path/folder/file.txt>)}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;; Filtrar somente arquivos}}}\par\pard
+\cbpat1{{\cf2{}}{\cf11{(}}{\cf2{filter}} {\cf11{(}}{\cf2{}}{\cf12{\b fn\b0 }} {\cf2{}}{\cf11{[}}{\cf2{file-object}}{\cf11{] (}}{\cf2{.isFile file-object}}{\cf11{))}} {\cf2{arvore-de-diretorio}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;;=> (<#clojure.java.io.File#{5}{8}{4}ffd{2}{2} /some/path/folder/file.txt>}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;; Sequencia de linhas em um arquivo}}}\par\pard
+\cbpat1{{\cf2{}}{\cf11{(}}{\cf2{}}{\cf12{\b def\b0 }} {\cf2{lines}} {\cf11{(}}{\cf2{line-seq}} {\cf11{(}}{\cf2{io/reader}} {\cf11{(}}{\cf2{io/file}} {\cf3{"some/file.txt"}}{\cf2{}}{\cf11{))))}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;;=> ("first line"}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;;    "second line")}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;; Deixa todas as linhas em caixa alta}}}\par\pard
+\cbpat1{{\cf2{}}{\cf11{(}}{\cf2{}}{\cf15{map}} {\cf2{s/upper-case lines}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;; => ("FIRST LINE"}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;;     "SECOND LINE")}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;; Filtra todos os numeros pares num Vetor}}}\par\pard
+\cbpat1{{\cf2{}}{\cf11{(}}{\cf2{filter even?}} {\cf11{[}}{\cf2{}}{\cf4{{1} {2} {3} {4} {5}}}{\cf2{}}{\cf11{])}}}\par\pard
+\cbpat1{{\cf2{}}{\cf5{;;=> ({2} {4})}}{\cf2{}}}\par\pard
+\cbpat1{}}

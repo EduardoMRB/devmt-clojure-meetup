@@ -1,0 +1,13 @@
+(ns logger
+  (:import java.io BufferedWriter FileWriter))
+
+(def wtr (agent (BufferedWriter. (FileWriter. "log.txt"))))
+
+(defn log [message]
+  (send wtr
+        (fn [out message]
+              (.write out message))
+        message))
+
+(log "logging")
+(log "warning")

@@ -1,0 +1,5 @@
+(def f (future (expensive-computation)))
+
+;; Retorna o resultado da computacao, vai bloquear a thread ate que a funcao
+;; seja executada
+@f

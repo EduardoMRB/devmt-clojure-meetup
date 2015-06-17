@@ -1,0 +1,8 @@
+(def my-map {:name "Heisenberg"})
+;;=> my-map
+
+(assoc my-map :job "Drug dealer")
+;;=> {:name "Heisenberg", :job "Drug dealer"}
+
+my-map
+;;=> {:name "Heisenberg"}

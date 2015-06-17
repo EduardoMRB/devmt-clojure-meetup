@@ -1,0 +1,18 @@
+{\rtf1\ansi\uc0 \deff1{\fonttbl{\f1\fmodern\fprq1\fcharset0 monaco;}}{\colortbl;\red255\green245\blue238;\red00\green00\blue00;\red255\green20\blue147;\red255\green20\blue147;\red41\green41\blue204;\red41\green41\blue204;\red106\green90\blue205;\red128\green00\blue128;\red255\green20\blue147;\red85\green85\blue85;\red103\green103\blue103;\red46\green139\blue87;\red46\green139\blue87;\red105\green105\blue105;\red00\green00\blue143;}
+\paperw11905\paperh16837\margl1134\margr1134\margt1134\margb1134\sectd\plain\f1\fs40
+\pard \cbpat1{{\cf2{}}{\cf11{(}}{\cf2{ns sandbox.core-async-events}}}\par\pard
+\cbpat1{  {\cf11{(:}}{\cf2{require-macros}} {\cf11{[}}{\cf2{cljs.core.async.macros}} {\cf11{:}}{\cf2{refer}} {\cf11{[}}{\cf2{go}}{\cf11{]])}}}\par\pard
+\cbpat1{{\cf2{}}  {\cf11{(:}}{\cf2{require}} {\cf11{[}}{\cf2{cljs.core.async}} {\cf11{:}}{\cf2{as async}} {\cf11{:}}{\cf2{refer}} {\cf11{[}}{\cf2{put}}{\cf11{! >! <!}} {\cf2{chan}}{\cf11{]]}}}\par\pard
+\cbpat1{{\cf2{}}            {\cf11{[}}{\cf2{domina.css}} {\cf11{:}}{\cf2{as css}}{\cf11{]}}}\par\pard
+\cbpat1{{\cf2{}}            {\cf11{[}}{\cf2{domina.event}} {\cf11{:}}{\cf2{as event}}{\cf11{]))}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf11{(}}{\cf2{}}{\cf12{\b defn\b0 }} {\cf2{events}} {\cf11{[}}{\cf2{element event-type}}{\cf11{]}}}\par\pard
+\cbpat1{{\cf2{}}  {\cf11{(}}{\cf2{}}{\cf14{\b let\b0 }} {\cf2{}}{\cf11{[}}{\cf2{c}} {\cf11{(}}{\cf2{chan}}{\cf11{)]}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf11{(}}{\cf2{event/listen}}{\cf11{!}} {\cf2{element event-type}} {\cf11{(}}{\cf2{}}{\cf12{\b fn\b0 }} {\cf2{}}{\cf11{[}}{\cf2{e}}{\cf11{] (}}{\cf2{put}}{\cf11{!}} {\cf2{c e}}{\cf11{)))}}}\par\pard
+\cbpat1{{\cf2{    c}}{\cf11{))}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf11{(}}{\cf2{}}{\cf14{\b let\b0 }} {\cf2{}}{\cf11{[}}{\cf2{click-events}} {\cf11{(}}{\cf2{events}} {\cf11{(}}{\cf2{css/sel}} {\cf3{"#some-button"}}{\cf2{}}{\cf11{) :}}{\cf2{click}}{\cf11{)]}}}\par\pard
+\cbpat1{{\cf2{}}  {\cf11{(}}{\cf2{go}} {\cf11{(}}{\cf2{while true}}}\par\pard
+\cbpat1{        {\cf11{(}}{\cf2{do-something-with}} {\cf11{(<!}} {\cf2{click-events}}{\cf11{))))}}}\par\pard
+\cbpat1{{\cf2{  click-events}}{\cf11{)}}{\cf2{}}}\par\pard
+\cbpat1{}}

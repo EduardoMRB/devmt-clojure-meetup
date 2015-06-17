@@ -1,0 +1,21 @@
+(ns sequence-demo
+  (:require [clojure.java.io :as io]
+            [clojure.string :as s]))
+;; Sequencia de arquivos e diretorios
+(def arvore-de-diretorio (file-seq (io/file "some/path")))
+;;=> (<#clojure.java.io.File#347fd723 /some/path/folder>
+;;    <#clojure.java.io.File#584ffd22 /some/path/folder/file.txt>)
+;; Filtrar somente arquivos
+(filter (fn [file-object] (.isFile file-object)) arvore-de-diretorio)
+;;=> (<#clojure.java.io.File#584ffd22 /some/path/folder/file.txt>
+;; Sequencia de linhas em um arquivo
+(def lines (line-seq (io/reader (io/file "some/file.txt"))))
+;;=> ("first line"
+;;    "second line")
+;; Deixa todas as linhas em caixa alta
+(map s/upper-case lines)
+;; => ("FIRST LINE"
+;;     "SECOND LINE")
+;; Filtra todos os numeros pares num Vetor
+(filter even? [1 2 3 4 5])
+;;=> (2 4)

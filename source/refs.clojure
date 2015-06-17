@@ -1,0 +1,11 @@
+(def conta-do-paulo (ref 10))
+(def conta-do-wilson (ref 100))
+
+(defn transferir [acc-from acc-to amount]
+  (dosync
+   (alter acc-from - amount)
+   (alter acc-to + amount)))
+
+(transferir conta-do-wilson conta-do-paulo 10)
+@conta-do-paulo ;; => 20
+@conta-do-wilson ;; => 90

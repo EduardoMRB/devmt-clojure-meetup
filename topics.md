@@ -1,0 +1,40 @@
+# Topics
+
+- About me
+- What is Clojure
+- Why Clojure
+- Syntax crash course
+    - Homoiconicity
+    - Special forms in Clojure and Ruby
+- Data types
+    - Symbol
+    - String
+    - Number
+    - Lists
+    - Vectors
+    - Maps
+    - Sets
+    - Keywords
+    - Persistent data structures
+- Functions
+    - fn, defn
+    - Function composition
+    - Partial application
+    - apply
+- Laziness
+    - Sequence abstraction
+    - Lazy-seq
+- Java interop
+    - Syntax
+- Macros
+    - Demo
+- Concurrency
+    - Atoms
+    - Agents
+    - Refs
+    - Futures
+    - Promisses
+    - core.async
+- Polymorphism
+    - Multimethods
+    - Protocols

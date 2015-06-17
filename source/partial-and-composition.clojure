@@ -1,0 +1,6 @@
+(def double (partial * 2))
+(double 2) ;;=> 4
+
+(def upper-cased-chars
+  (comp seq upper-case))
+(upper-cased-chars "abc") ;;=> (\A \B \C)

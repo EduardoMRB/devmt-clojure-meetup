@@ -1,0 +1,6 @@
+(fn [x] (* x x))
+
+(defn square [x]
+  (* x x))
+
+#(* % %)

@@ -1,0 +1,3 @@
+(def you! (all-of devmt-community))
+
+(thank you!)

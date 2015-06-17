@@ -1,0 +1,9 @@
+(def p (promise))
+
+(realized? p) ;; => false
+
+(deliver p 50)
+
+(realized? p) ;; => true
+
+@p ;; => 50

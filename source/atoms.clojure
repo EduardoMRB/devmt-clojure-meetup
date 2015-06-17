@@ -1,0 +1,11 @@
+(def medias (atom []))
+
+(swap! medias conj 1)
+;;=> #<Atom@asd3j2 [1]
+
+@medias
+;;=> [1]
+
+(reset! medias [])
+(deref medias)
+;;=> []

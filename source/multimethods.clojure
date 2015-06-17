@@ -1,0 +1,20 @@
+(defmulti area (fn [[type]] type))
+
+(defmethod area :square
+  [[_ x]]
+  (* x x))
+
+(defmethod area :circle
+  [[_ radius]]
+  (* Math/PI
+     (Math/pow radius 2)))
+
+(defmethod area :default
+  [_]
+  "Argument not supported")
+
+(def circle [:circle 3])
+(def sq [:square 4])
+
+(area circle) ;; => 28.27433...
+(area sq) ;; => 16

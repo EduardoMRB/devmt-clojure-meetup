@@ -1,0 +1,21 @@
+(defprotocol IArea
+  (area [this]))
+
+(defrecord Square [x]
+  IArea
+  (area [this]
+    (let [x (:x this)]
+      (* x x))))
+
+(defrecord Circle [r]
+  IArea
+  (area [this]
+    (let [radius (:r this)]
+      (* Math/PI
+         (Math/pow radius 2)))))
+
+(def circle (->Circle 3))
+(def sq (->Square 4))
+
+(area circle) ;;=> 28.27433...
+(area sq) ;;=> 16

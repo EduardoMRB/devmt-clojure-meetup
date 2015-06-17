@@ -1,0 +1,20 @@
+(ns java-interop-demo
+  (:import java.util.Date
+           java.util.ArrayList))
+(def now (Date.))
+;; Acessando metodos do objeto
+(. now getSeconds)
+;; 26
+(.getSeconds now)
+;; 26
+;; Metodos estaticos
+(Math/pow 2 2)
+;; 4.0
+;; Acessando propriedades e metodos em corrente
+(.. System getProperties (get "java.version"))
+;; "1.8.0_45"
+;; Com macros
+(def arr-list (ArrayList.))
+(doto arr-list (.add 0 1) (.add 1 2))
+(str arr-list)
+;;=> [1, 2]
