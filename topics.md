@@ -1,6 +1,5 @@
 # Topics
 
-- About me
 - What is Clojure
 - Why Clojure
 - Syntax crash course
